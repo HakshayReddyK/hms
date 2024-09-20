@@ -13,7 +13,12 @@
     <script>
 
     function callme() {
-        document.getElementById("h1").innerText+= "Nve pranav";
+        if(document.getElementById("h1").innerText == "Click the button") {
+            document.getElementById("h1").innerText= "HMS ";
+        } else {
+            while(true)
+                document.getElementById("h1").innerText+= "HMS ";
+        }
     }
     </script>
 </body>
