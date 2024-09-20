@@ -6,41 +6,14 @@
     <title>Student Email Fetcher</title>
 </head>
 <body>
-    <h1>Get Student Email</h1>
-    <input type="text" id="studentID" placeholder="Enter Student ID">
-    <button onclick="fetchStudentEmail('9807')">Get Email</button>
+    <h1 id = 'h1'>Click the button</h1>
+    <button onclick="callme()">Click me</button>
     <p id="result"></p>
 
     <script>
 
-    async function fetchStudentEmail(studentId) {
-        const url = `https://fu5nvuywxku3cihd55lauzdlpe0ixdcd.lambda-url.eu-north-1.on.aws/9807`;
-
-        // Assuming you have parameters like: 
-        // const params = {
-        //     "studentid": "9807"
-        // };
-
-        // const searchParams = new URLSearchParams(params);
-
-        // const url = `${apiUrl}?${searchParams.toString()}`;
-        
-        try {
-            const response = await fetch(url,{
-            method: 'GET',
-            mode:'no-cors',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-            });
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            document.getElementById('result').innerText = `Student Email: ${data.email}`;
-        } catch (error) {
-            document.getElementById('result').innerText = `Error: ${error.message}`;
-        }
+    function callme() {
+        document.getElementById("h1").innerText+= "Nve tanny";
     }
     </script>
 </body>
